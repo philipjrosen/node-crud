@@ -5,9 +5,7 @@ const port = process.env.PORT || 8080;
 // configure our application
 
 // set the routes
-app.get('/', (req, res) => {
-  res.send('Hey')
-});
+app.use(require('./app/routes'))
 
 // start our server
 app.listen(port, () => {
